@@ -1,0 +1,202 @@
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  body {
+    background-color: rgb(21 21 47);
+  }
+
+  .block {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+  }
+  
+  .conteiner {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    margin-bottom: 50px;
+  }
+
+  .card_zag {
+    margin: 0;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(198, 185, 185);
+    
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
+  }
+
+  .card_open {
+    position: relative;
+    padding: 0;
+    width: calc(25% - 30px);
+    height: 260px;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+    margin-left: 30px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+
+  .card_face,
+  .card_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(40, 40, 188);
+    backface-visibility: hidden;
+  }
+
+  .card_open:active {
+    transform: scale(0.97);
+    transition: transform .2s ease-in-out;
+  }
+
+  .flip {
+    transform: rotateY(180deg);
+  }
+
+  .card_face {
+    transform: rotateY(180deg);
+  }
+
+
+  .btn_plus {
+    width: 200px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 18px;
+    background-color: #ffffff;
+  }
+
+  .btn:focus {
+    background-color: rgb(237, 187, 187);
+  }
+
+  .btn:hover {
+    color: black;
+    background-color: white;
+    border-color: black
+  }
+
+  .btn:active {
+    background-color: rgb(180, 174, 174);
+  }
+
+  
+
+  /* победитель */
+
+  .winner {
+    position: fixed;
+    top: 10%;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5);
+    background-image:  url(/img/winner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+  }
+
+  .winner_open {
+    display: block;
+  }
+
+  .btn_winner {
+    position: absolute;
+    bottom: 5%;
+    left: 28%;
+    width: 200px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 18px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 20px rgba(16, 16, 16, 0.5);
+  }
+
+  .winner_text {
+    position: absolute;
+    top: 35%;
+    left: 22%;
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(131, 53, 53);
+  }
+
+  .head_zag {
+    justify-content: space-between;
+  }
+
+  .level {
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(198, 185, 185);
+  }
+  
+  .level_opt {
+    justify-content: end;
+  }
+
+  .btn_level {
+    width: 100px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 18px;
+    background-color: #ffffff;
+  }
+
+  .btn_level:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  .level_16{
+    display: none;
+  }
+
+  .level_24{
+    display: none;
+  }
+  
+  .card_level_cloce {
+    display: block;
+  }
+
+  .card_width {
+    width: calc(12% - 30px);
+    height: 115px;
+  }
